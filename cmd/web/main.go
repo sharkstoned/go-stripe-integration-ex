@@ -44,7 +44,7 @@ func (app *application) serve() error {
 		WriteTimeout:      5 * time.Second,
 	}
 
-	app.infoLog.Println("Listening on port %d, env %s", app.config.port, app.config.env)
+	app.infoLog.Printf("Listening on port %d, env %s", app.config.port, app.config.env)
 
 	return server.ListenAndServe()
 }
